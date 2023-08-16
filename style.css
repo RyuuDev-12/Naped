@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lexend+Deca:wght@300;400;600&display=swap');
+
+:root{
+    --roxo: #8257e9;
+    --cinza: #c4c4c4;
+    --azul-escuro: #13131f;
+    --branco: #fefbfb;
+    --linear: linear-gradient(to top, rgba(19, 19, 31, 1) -2%, rgba(0, 0, 0, 0));
+}
+
+
+/* reset */
+
+html{font-size: 62.5%;}
+
+*{
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--branco);
+    text-decoration: none;
+    list-style: none;
+}
+
+div{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card-recomendacao p, #destaque p, #sub-destaque p{
+    font-family: 'Lexend Deca';
+    padding: 32% 5% 0;
+}
+
+body{
+    background-color: var(--azul-escuro);
+}
+
+/* atribuindo uma origem para cada img/div */
+
+#img-noticia-1{background: var(--linear), url('imgs/thumb-1920-1133039\ 1.png') no-repeat center;}
+#img-noticia-2{background: var(--linear), url('imgs/thumb-1920-678085\ 1.png') no-repeat center;}
+#img-noticia-3{background: var(--linear), url('imgs/minecraft-vendas\ 1.png') no-repeat center;}
+#img-noticia-4{background: var(--linear), url('imgs/harry-potter-wallpapers-desktop-86788224\ 1.png') no-repeat center;}
+#img-noticia-5{background: var(--linear), url('imgs/supernatural\ 1.png') no-repeat center;}
+#img-noticia-6{background: var(--linear), url('imgs/thumb-1920-1133039\ 1.png') no-repeat center;}
+#img-noticia-7{background: var(--linear), url('imgs/thumb-1920-678085\ 1.png') no-repeat center;}
+#img-noticia-8{background: var(--linear), url('imgs/minecraft-vendas\ 1.png') no-repeat center;}
+#img-noticia-9{background: var(--linear), url('imgs/harry-potter-wallpapers-desktop-86788224\ 1.png') no-repeat center;}
+#img-noticia-10{background: var(--linear), url('imgs/supernatural\ 1.png') no-repeat center;}
+#img-noticia-11{background: var(--linear), url('imgs/thumb-1920-1133039\ 1.png') no-repeat center;}
+#img-recomendacao-1{background: var(--linear), url('imgs/A-Viagem-de-Chihiro-chihiro-e-haku\ 1.png') no-repeat center;}
+#img-recomendacao-2{background: var(--linear), url('imgs/cena-do-filme-a-rede-social-2010-1547503577708_v2_1920x1204\ 1.png') no-repeat center;}
+#img-recomendacao-3{background: var(--linear), url('imgs/NarTrailer_Print09.max-1920x1200\ 1.png') no-repeat center;}
+
+/* header */
+
+header, ul{
+    display: flex
+}
+
+header{
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 2rem 7vw;
+}
+
+h2{
+    color: var(--roxo);
+}
+
+ul{
+    align-items: center;
+    padding-left: 10vw;
+}
+
+li a{
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    color: var(--cinza);
+}
+
+#selecionado{
+    color: var(--branco);
+}
+
+header > a{
+    align-self: center;
+    padding: 1rem 3rem;
+    border-radius: 20rem;
+    border: 1px solid var(--roxo);
+    transition: .4s;
+}
+
+header > a:hover{
+    background-color: var(--roxo);
+}
+
+/* main */
+
+main{
+    height: 40rem;
+    padding: 10rem 7vw;
+    font-size: 2rem;
+}
+
+h1{
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    width: 18vw;
+    font-size: 2.8vw;
+    line-height: 4vw;
+    padding-bottom: 2rem;
+}
+
+main p{
+    color: var(--cinza);
+    width: 48rem;
+    line-height: 3rem;
+
+}
+
+/* section principal */
+
+#main-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    "destaque sub-destaque"
+    "noticias recomendado";
+    padding: 0 7vw;
+    grid-gap: 4rem 1.5rem;
+}
+
+#destaque{
+    font-size: 2.5rem;
+    grid-area: destaque;
+    background: var(--linear), url('imgs/Mask\ Group-1.png') no-repeat center;
+}
+
+#sub-destaque div{
+    width: 100%;
+    height: calc(33.5rem/2);
+    background-size: 100%;
+    grid-area: sub-destaque;
+}
+
+#sub-destaque div p{
+    padding-top: 28%;
+    font-size: 1.3rem;
+}
+
+#sub-destaque-img-1{
+    background: var(--linear), url('imgs/98677e90349dff1d04519b1cebc0d02a\ 1.png') no-repeat center;
+}
+
+#sub-destaque-img-2{
+    margin-top: 1.5rem;
+    background-image: var(--linear), url('imgs/ElTI-Q0UcAA3EFg\ 1.png');
+}
+
+/* grid noticias */
+
+#noticias{
+    grid-area: noticias;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    overflow-y: scroll;
+    height: calc(18rem * 5);
+}
+
+.linhas-noticias{
+    height: 15.6rem;
+    display: grid;
+    grid-template-columns: 2.3fr 5fr 1fr;
+    grid-template-areas:
+    "img titulo"
+    "img p"
+    "img data"
+    "img link";
+    grid-gap: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.imgs-noticias{
+    min-width: 100%;
+    height: 100%;
+    grid-area: img;
+    background-size: 100% 100%;
+}
+
+.linhas-noticias h4{
+    font-family: 'Lexend Deca';
+    padding-top: .5rem;
+    line-height: 2.5rem;
+    grid-area: titulo;
+}
+
+.linhas-noticias p{
+    color: var(--cinza);
+    padding: .5rem 0;;
+    grid-area: p;
+}
+
+.linhas-noticias span{
+    padding: .5rem 0;;
+    grid-area: data;
+}
+
+.linhas-noticias a{
+    width: max-content;
+    margin-top: .5rem;
+    padding: .8rem 2rem;
+    border-radius: 3px;
+    background-color: var(--roxo);
+    color: var(--branco);
+    grid-area: link;
+    transition: .5s;
+}
+
+.linhas-noticias a:hover{
+    background-color: var(--branco);
+    color: var(--roxo);
+}
+
+
+
+/* grid recomendado */
+
+h3{
+    height: 4.5rem;
+    font-size: 2.5rem;
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    border-bottom: 3px solid var(--roxo);
+    width: max-content;
+    padding-right: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+#recomendado{grid-area: recomendado;}
+
+#recomendado-grid{
+    display: grid;
+    grid-template-rows: auto repeat(3, 1fr);
+    grid-gap: 4rem;
+}
+
+.card-recomendacao{
+    background-size: 100% 100% !important;
+}
+
+.card-recomendacao p{
+    padding-top: 52%;
+    font-size: 1.3rem;
+}
